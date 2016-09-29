@@ -1,0 +1,2039 @@
+{
+    "version": "0.6.0",
+    "framerate": 30,
+    "duration": 136,
+    "scale": 1,
+    "layers": [
+        {
+            "id": "373a0bad48104cffae99c384a3aa2cde",
+            "name": "Eye",
+            "type": "Eye",
+            "visible": true,
+            "locked": false,
+            "keyframes": [
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 0
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 0
+                        },
+                        "Translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 8
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 9
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 14
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": -397.1464712272393,
+                            "y": -67.455736544454
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 29
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": 449.47499963506743,
+                            "y": -60.97423095047145
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 44
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": -397.1464712272393,
+                            "y": -67.455736544454
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 59
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": 449.47499963506743,
+                            "y": -60.97423095047145
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 74
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": -397.1464712272393,
+                            "y": -67.455736544454
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 89
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": 449.47499963506743,
+                            "y": -60.97423095047145
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 104
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": -397.1464712272393,
+                            "y": -67.455736544454
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 119
+                },
+                {
+                    "value": {
+                        "Rotate": 0,
+                        "Scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "Translate": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        },
+                        "Vertex 1": {
+                            "x": -300,
+                            "y": -300
+                        },
+                        "Vertex 2": {
+                            "x": 0,
+                            "y": -300
+                        },
+                        "Vertex 3": {
+                            "x": 300,
+                            "y": -300
+                        },
+                        "Vertex 4": {
+                            "x": -300,
+                            "y": 0
+                        },
+                        "Vertex 5": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "Vertex 6": {
+                            "x": 300,
+                            "y": 0
+                        },
+                        "Vertex 7": {
+                            "x": -300,
+                            "y": 300
+                        },
+                        "Vertex 8": {
+                            "x": 0,
+                            "y": 300
+                        },
+                        "Vertex 9": {
+                            "x": 300,
+                            "y": 300
+                        }
+                    },
+                    "time": 135
+                }
+            ]
+        },
+        {
+            "id": "d345a1b28f8f4f918834ecbc8bf891c6",
+            "name": "Eye Texture",
+            "type": "Eye Texture",
+            "visible": true,
+            "locked": false,
+            "keyframes": [
+                {
+                    "value": {
+                        "Texture": "animations/textures/white-eye.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 0
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/no07.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 9
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/white-eye.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 135
+                }
+            ]
+        },
+        {
+            "id": "c64ac02e7a0c4979973678745f03224d",
+            "name": "Body",
+            "type": "Body",
+            "visible": true,
+            "locked": false,
+            "keyframes": [
+                {
+                    "value": {
+                        "Head": 0,
+                        "Torso": 0,
+                        "Pelvis": 0,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 0
+                },
+                {
+                    "value": {
+                        "Head": 22,
+                        "Torso": -22,
+                        "Pelvis": -44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 14
+                },
+                {
+                    "value": {
+                        "Head": -22,
+                        "Torso": 22,
+                        "Pelvis": 44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 29
+                },
+                {
+                    "value": {
+                        "Head": 22,
+                        "Torso": -22,
+                        "Pelvis": -44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 44
+                },
+                {
+                    "value": {
+                        "Head": -22,
+                        "Torso": 22,
+                        "Pelvis": 44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 59
+                },
+                {
+                    "value": {
+                        "Head": 22,
+                        "Torso": -22,
+                        "Pelvis": -44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 74
+                },
+                {
+                    "value": {
+                        "Head": -22,
+                        "Torso": 22,
+                        "Pelvis": 44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 89
+                },
+                {
+                    "value": {
+                        "Head": 22,
+                        "Torso": -22,
+                        "Pelvis": -44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 104
+                },
+                {
+                    "value": {
+                        "Head": -22,
+                        "Torso": 22,
+                        "Pelvis": 44,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 119
+                },
+                {
+                    "value": {
+                        "Head": 0,
+                        "Torso": 0,
+                        "Pelvis": 0,
+                        "Tween": {
+                            "display": "sine in out",
+                            "label": "Sine Ease In Out",
+                            "value": "sineInOut"
+                        }
+                    },
+                    "time": 135
+                }
+            ]
+        },
+        {
+            "id": "19470b5eb0424d538deefd8195de778a",
+            "name": "Audio Event",
+            "type": "Audio Event",
+            "visible": true,
+            "locked": false,
+            "keyframes": [
+                {
+                    "value": {
+                        "AudioEvent": {
+                            "file": "i-guess-you-play/good01/lalala.mp3"
+                        }
+                    },
+                    "time": 0
+                },
+                {
+                    "value": {
+                        "AudioEvent": {
+                            "file": ""
+                        }
+                    },
+                    "time": 135
+                }
+            ]
+        },
+        {
+            "id": "3af605d1cb3d4f039f96be5c0c9bc80b",
+            "name": "Background Texture",
+            "type": "Background Texture",
+            "visible": true,
+            "locked": false,
+            "keyframes": [
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/black.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 0
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/001.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 9
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/002.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 11
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/003.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 13
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/004.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 15
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/005.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 17
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/006.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 19
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 21
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 23
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 25
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 27
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 29
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 31
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 33
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 35
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 37
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 39
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 41
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 43
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 45
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 47
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 49
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 51
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 53
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 55
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 57
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 59
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 61
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 63
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 65
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 67
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 69
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 71
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 73
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 75
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 77
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 79
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 81
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 83
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 85
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 87
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 89
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 91
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 93
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 95
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 97
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 99
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 101
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 103
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 105
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 107
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 109
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 111
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 113
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 115
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 117
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 119
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 121
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 123
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 125
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 127
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 129
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 131
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/007.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 133
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/bg/black.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 135
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good01/009.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 137
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good/008.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 139
+                },
+                {
+                    "value": {
+                        "Texture": "animations/textures/i-guess-you-play/good/009.png",
+                        "Color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        }
+                    },
+                    "time": 141
+                }
+            ]
+        },
+        {
+            "id": "84d93427916946f0a4d54c7fac52916a",
+            "name": "LED",
+            "type": "LED",
+            "visible": true,
+            "locked": false,
+            "keyframes": [
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 0
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 8
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 9
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 162,
+                            "b": 255
+                        }
+                    },
+                    "time": 13
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 234,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 17
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 204,
+                            "g": 0,
+                            "b": 255
+                        }
+                    },
+                    "time": 21
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 102,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 25
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 29
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 33
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 162,
+                            "b": 255
+                        }
+                    },
+                    "time": 37
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 234,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 41
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 204,
+                            "g": 0,
+                            "b": 255
+                        }
+                    },
+                    "time": 45
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 102,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 49
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 53
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 57
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 162,
+                            "b": 255
+                        }
+                    },
+                    "time": 61
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 234,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 65
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 204,
+                            "g": 0,
+                            "b": 255
+                        }
+                    },
+                    "time": 69
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 102,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 73
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 77
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 81
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 162,
+                            "b": 255
+                        }
+                    },
+                    "time": 85
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 234,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 89
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 204,
+                            "g": 0,
+                            "b": 255
+                        }
+                    },
+                    "time": 93
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 102,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 97
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 101
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 105
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 162,
+                            "b": 255
+                        }
+                    },
+                    "time": 109
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 234,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 113
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 204,
+                            "g": 0,
+                            "b": 255
+                        }
+                    },
+                    "time": 117
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 102,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 121
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 125
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 129
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 162,
+                            "b": 255
+                        }
+                    },
+                    "time": 133
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 135
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 234,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 137
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 204,
+                            "g": 0,
+                            "b": 255
+                        }
+                    },
+                    "time": 141
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 102,
+                            "g": 255,
+                            "b": 0
+                        }
+                    },
+                    "time": 145
+                },
+                {
+                    "value": {
+                        "Color": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "time": 149
+                }
+            ]
+        }
+    ]
+}

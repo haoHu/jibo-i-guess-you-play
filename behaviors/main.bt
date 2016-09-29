@@ -1,0 +1,403 @@
+{
+    "1": {
+        "id": 1,
+        "class": "Sequence",
+        "name": "",
+        "asset-pack": "core",
+        "children": [
+            "12c7385c-8114-45cc-a02b-dd76012ce0b3",
+            "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6"
+        ],
+        "decorators": [],
+        "options": {}
+    },
+    "meta": {
+        "version": 1
+    },
+    "016160fe-e45c-404b-8d60-66675f384a47": {
+        "id": "016160fe-e45c-404b-8d60-66675f384a47",
+        "class": "ExecuteScript",
+        "name": "init",
+        "options": {
+            "exec": [
+                "() => {",
+                "    notepad.iGuess = require('../src/i-guess-you-play.js');",
+                "    notepad.iGuess.init();",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "decorators": [],
+        "skipped": false
+    },
+    "ffc75033-6bf8-485e-bbf4-1d0c1ead28c9": {
+        "id": "ffc75033-6bf8-485e-bbf4-1d0c1ead28c9",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "children": [
+            "0450302a-adfd-4167-8773-7334b83d113a",
+            "84c5a1f8-f31d-42e2-910a-c878db7e55fd"
+        ],
+        "decorators": [
+            "10383ecb-dbf3-4694-b467-d5d6ab6ee2c6"
+        ]
+    },
+    "84c5a1f8-f31d-42e2-910a-c878db7e55fd": {
+        "id": "84c5a1f8-f31d-42e2-910a-c878db7e55fd",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  console.log(notepad);",
+                "  var word = notepad.iGuess.getCurrentWord();",
+                "  if (notepad.iGuess.getGameState() === 1) {",
+                "    if (notepad.action === 'ready') {",
+                "      notepad.iGuess.gameReady();",
+                "    }",
+                "  }",
+                "  else if (notepad.iGuess.getGameState() === 2) {",
+                "    if (notepad.action === \"right\") {",
+                "      notepad.iGuess.gameRight();",
+                "    }",
+                "    else if (notepad.action === \"skip\") {",
+                "      notepad.iGuess.gameSkip();",
+                "    }",
+                "    else if (notepad.action === \"gameover\") {",
+                "      notepad.iGuess.gameOver();",
+                "    } ",
+                "    else if ((word != undefined) && ",
+                "      (notepad.word != undefined)) {",
+                "      var words = notepad.word.split(' ');",
+                "      for (var i = 0; i < words.length; i++) {",
+                "        if (words[i] === word.toLowerCase()) {",
+                "          notepad.iGuess.gameRight();",
+                "        }",
+                "      }",
+                "    }",
+                "  }",
+                "  if (notepad.action === \"exit\") {",
+                "    console.log('exit');",
+                "    notepad.iGuess.exitGame();",
+                "  }",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "ffc75033-6bf8-485e-bbf4-1d0c1ead28c9"
+    },
+    "0450302a-adfd-4167-8773-7334b83d113a": {
+        "id": "0450302a-adfd-4167-8773-7334b83d113a",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: true,",
+                "        incremental: false,",
+                "        bargein :true,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "i-guess-you-play.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.action = asrResult.NLParse.what;",
+                "      notepad.word = asrResult.NLParse.word;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "ffc75033-6bf8-485e-bbf4-1d0c1ead28c9"
+    },
+    "10383ecb-dbf3-4694-b467-d5d6ab6ee2c6": {
+        "id": "10383ecb-dbf3-4694-b467-d5d6ab6ee2c6",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    if(notepad.iGuess.getGameState() === 5)",
+                "      return false",
+                "    else",
+                "      return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "8d9144a4-5083-44db-b1ee-4bc571bb6d3e": {
+        "id": "8d9144a4-5083-44db-b1ee-4bc571bb6d3e",
+        "class": "Listen",
+        "name": "play game",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: true,",
+                "        incremental: false,",
+                "        bargein :true,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "game.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.action = asrResult.NLParse.what;",
+                "      console.log(\"game\");",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "decorators": [
+            "a13129f3-ac49-4404-88bf-25eb30fe60f7"
+        ]
+    },
+    "a13129f3-ac49-4404-88bf-25eb30fe60f7": {
+        "id": "a13129f3-ac49-4404-88bf-25eb30fe60f7",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  if (((notepad.iGuess === undefined) || ",
+                "  (notepad.iGuess != undefined && notepad.iGuess.getGameState() === 5)) &&",
+                "  (notepad.action === 'game')) ",
+                "    return false;",
+                "  else",
+                "    return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "e1f0be48-4106-44b7-b40e-2eae7a02bac4": {
+        "id": "e1f0be48-4106-44b7-b40e-2eae7a02bac4",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => { ",
+                "  if ((notepad.iGuess.getGameState() >= 1) && ",
+                "  ((notepad.action === 'a') || ",
+                "  (notepad.action === 'b') ||",
+                "  (notepad.iGuess.getType() != undefined)))",
+                "    return false;",
+                "  else return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "skipped": false
+    },
+    "adaf3cd4-4967-4d91-b86e-727d4d8cace9": {
+        "id": "adaf3cd4-4967-4d91-b86e-727d4d8cace9",
+        "class": "Listen",
+        "name": "choose type",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "game.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.action = asrResult.NLParse.what;",
+                "      console.log(\"choose type\");",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "decorators": [
+            "e1f0be48-4106-44b7-b40e-2eae7a02bac4"
+        ],
+        "skipped": true
+    },
+    "5439e9d4-fa12-4aaa-8617-166809b9c06a": {
+        "id": "5439e9d4-fa12-4aaa-8617-166809b9c06a",
+        "class": "ExecuteScript",
+        "name": "choose type",
+        "options": {
+            "exec": [
+                "() => {",
+                "  if (notepad.iGuess.getType() === undefined) {",
+                "      notepad.iGuess.chooseType(notepad.action);",
+                "  }",
+                "  //console.log('typeChosen') ",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "decorators": [],
+        "skipped": true
+    },
+    "9886228d-d3b1-4e29-8068-1c2b4da5a77a": {
+        "id": "9886228d-d3b1-4e29-8068-1c2b4da5a77a",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  if ((notepad.iGuess.getGameState() >= 2) &&",
+                "  ((notepad.action === 'a') || ",
+                "  (notepad.action === 'b') || ",
+                "  (notepad.action === 'c') ||",
+                "  (notepad.iGuess.getTime() != undefined)))",
+                "    return false;",
+                "  else",
+                "    return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "skipped": false
+    },
+    "21ac6693-4cc4-428a-aa3e-5c9f54662b3a": {
+        "id": "21ac6693-4cc4-428a-aa3e-5c9f54662b3a",
+        "class": "Listen",
+        "name": "choose time",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "game.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.action = asrResult.NLParse.what;",
+                "      console.log(\"choose time\");",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "decorators": [
+            "9886228d-d3b1-4e29-8068-1c2b4da5a77a"
+        ],
+        "skipped": true
+    },
+    "29f574be-45a0-4d95-a636-96d5896ae187": {
+        "id": "29f574be-45a0-4d95-a636-96d5896ae187",
+        "class": "ExecuteScript",
+        "name": "choose time",
+        "options": {
+            "exec": [
+                "() => {",
+                "  if (notepad.iGuess.getTime() === undefined) {",
+                "      notepad.iGuess.chooseTime(notepad.action);",
+                "    }",
+                "    //console.log('timeChosen')",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "decorators": [],
+        "skipped": true
+    },
+    "12c7385c-8114-45cc-a02b-dd76012ce0b3": {
+        "id": "12c7385c-8114-45cc-a02b-dd76012ce0b3",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "greeting.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6": {
+        "id": "c7ba53b8-f7d8-4e7a-ab08-e05d9c3123b6",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "8d9144a4-5083-44db-b1ee-4bc571bb6d3e",
+            "016160fe-e45c-404b-8d60-66675f384a47",
+            "adaf3cd4-4967-4d91-b86e-727d4d8cace9",
+            "5439e9d4-fa12-4aaa-8617-166809b9c06a",
+            "21ac6693-4cc4-428a-aa3e-5c9f54662b3a",
+            "29f574be-45a0-4d95-a636-96d5896ae187",
+            "ffc75033-6bf8-485e-bbf4-1d0c1ead28c9"
+        ],
+        "decorators": [
+            "448115e8-5849-4797-a6aa-2288ce5567d8"
+        ]
+    },
+    "448115e8-5849-4797-a6aa-2288ce5567d8": {
+        "id": "448115e8-5849-4797-a6aa-2288ce5567d8",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return true;",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    }
+}

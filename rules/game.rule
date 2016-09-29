@@ -1,0 +1,13 @@
+TopRule = (
+    $game{what='game'} |
+    $ready{what='ready'} |
+    $chooseA{what='a'} |
+    $chooseB{what='b'} |
+    $chooseC{what='c'}
+);
+
+chooseA = (a);
+chooseB = (b | be);
+chooseC = (c | see);
+game = ((game) | (play game) | (i want to play game));
+ready = (ready | ok | start | (i am ready));

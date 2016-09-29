@@ -1,0 +1,15 @@
+TopRule = $* (
+    $ready{what='ready'} |
+    $right{what='right'} |
+    $skip{what='skip'} |
+    $gameover{what='gameover'} |
+    $exit{what='exit'} |
+    $word{word=word._name}
+) $*;
+
+ready = (ready | ok | start | (i am ready));
+right = (right | correct | ok);
+skip = (skip | pass);
+gameover = (game over);
+exit = (quit | (quit game) | (quit the game) | exit | (exit game) | (exit the game));
+word @= (+$w){_name=_parsed};

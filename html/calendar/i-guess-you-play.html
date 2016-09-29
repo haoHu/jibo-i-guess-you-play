@@ -1,0 +1,494 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Hello World</title>
+<body>
+<script src="../pixi.js/bin/pixi.js"></script>
+<script>
+var Container = PIXI.Container,
+  autoDetectRenderer = PIXI.autoDetectRenderer,
+  loader = PIXI.loader,
+  resources = PIXI.loader.resources,
+  Sprite = PIXI.Sprite;
+
+var renderer = autoDetectRenderer(1280, 720);
+document.body.appendChild(renderer.view);
+
+// create the root of the scene graph
+var stage = new Container();
+var boardContainer = new Container();
+var config = {
+  eyeScale: 0.78,
+  titleEyeX: 30,
+  titleEyeY: -215,
+  titleScale: 0.85,
+  statisScale: 0.78
+};
+
+var style = {
+    fontFamily: 'Arial',
+    fontSize: '180px',
+    fontStyle: 'bold',
+    fill : '#F7EDCA',
+    stroke : '#4a1850',
+    strokeThickness : 5,
+};
+
+var scoreStyle = {
+  fontFamily: 'Arial',
+  fontSize: '80px',
+  fontStyle: 'bold',
+  fill: '#20232d',
+  stroke: '#FFFFFF',
+  strokeThickness: 3,
+};
+
+var words = ['dog', 'cat', 'cow', 'elephant', 'tiger', 'lion', 'monkey', 'pander', 'pig', 'zebra', 'mouse'];
+
+var jiboEyeSpr, titleSpr, titleEyeSpr, wordSpr, statisticsSpr, scoreText, totalText;
+var boardSprArr;
+var titleScale, eyeScaleX, eyeScaleY, blinkCount, isEyeExpend, boardScale;
+var delay, index, wordIndex, gameScore = 0;
+var leftBtn, rightBtn;
+var state;
+loader
+    .add(["images/title1.png",
+      "images/title2.png"
+    ])
+    .load(init);
+
+function init(){
+    jiboEyeSpr = Sprite.fromImage("images/white-eye.png");
+    jiboEyeSpr.position.set(renderer.width/2, renderer.height/2);
+    jiboEyeSpr.scale.set(config.eyeScale);
+    jiboEyeSpr.anchor.set(0.5);
+    stage.addChild(jiboEyeSpr);
+    delay = 15;
+    isEyeExpend = false;
+    eyeScaleX = config.eyeScale;
+    eyeScaleY = config.eyeScale;
+    state = eyeBlink;
+    animate();
+}
+
+function eyeBlink() {
+  delay--;
+  if (delay < 0) {
+    //close eye
+    if (!isEyeExpend)
+      if (eyeScaleY > 0.08) {
+        eyeScaleY -= 0.1;
+        eyeScaleX += 0.02;
+        jiboEyeSpr.scale.set(eyeScaleX, eyeScaleY);
+      }
+      else isEyeExpend = true;
+      //open eye
+    else {
+      if (eyeScaleY < config.eyeScale) {
+        eyeScaleY += 0.1;
+        eyeScaleX -= 0.02;
+        jiboEyeSpr.scale.set(eyeScaleX, eyeScaleY);
+      }
+      else {
+        delay = 20;
+        eyeScaleX = config.eyeScale;
+        eyeScaleY = config.eyeScale;
+        isEyeExpend = false;
+        state = eyeEscape;
+      }
+    }
+  }
+}
+
+function eyeEscape() {
+  delay--;
+  if (delay < 0) {
+    if (!isEyeExpend) {
+      eyeScaleX += 0.025;
+      eyeScaleY -= 0.025;
+      jiboEyeSpr.scale.set(eyeScaleX, eyeScaleY);
+      if (eyeScaleX > 0.92)
+        isEyeExpend = true;
+    }
+    else {
+      if (eyeScaleX > 0.6) {
+        eyeScaleX -= 0.03;
+        eyeScaleY += 0.03;
+        jiboEyeSpr.scale.set(eyeScaleX, eyeScaleY);
+        jiboEyeSpr.y -= (0.08 * jiboEyeSpr.height);
+      }
+      else{
+        jiboEyeSpr.y -= (0.15 * jiboEyeSpr.height);
+        if (jiboEyeSpr.y < -jiboEyeSpr.height) {
+          //stage.removeChild(jiboEyeSpr);
+          titleSpr = new Sprite(resources["images/title1.png"].texture);
+          titleEyeSpr = new Sprite(resources["images/title2.png"].texture);
+          titleSpr.anchor.set(0.5);
+          titleEyeSpr.anchor.set(0.5);
+          titleSpr.position.set(renderer.width / 2, renderer.height / 2);
+          titleEyeSpr.position.set(config.titleEyeX, config.titleEyeY);
+          titleSpr.addChild(titleEyeSpr);
+          titleScale = 0.3;
+          titleSpr.scale.set(titleScale);
+          titleSpr.rotation = -0.1;
+          titleSpr.y = -titleSpr.height;
+          stage.addChild(titleSpr);
+          state = showTitle1;
+        }
+      }
+    }
+  }
+}
+
+function showTitle1() {
+  if (titleSpr.y <= renderer.height/2 - 70) {
+    titleSpr.y += 15;
+    titleSpr.rotation -= 0.003;
+  }
+  else{
+    if (titleScale < 0.95) {
+      titleSpr.y += 3;
+      titleScale += 0.04;
+      titleSpr.scale.set(titleScale);
+      titleSpr.rotation += 0.04;
+    }
+    else {
+      state = showTitle2;
+    }
+  }
+}
+
+function showTitle2() {
+  if (titleScale > config.titleScale) {
+    titleScale -= 0.015;
+    titleSpr.scale.set(titleScale);
+    titleSpr.rotation -= 0.065;
+  }
+  else {
+    if (titleSpr.rotation < 0) {
+      titleSpr.rotation += 0.03;
+    }
+    else {
+      delay = 20;
+      blinkCount = 2;
+      isEyeExpend = false
+      state = titleBlink;
+    }
+  }
+}
+
+function titleBlink() {
+  delay--;
+  if (delay < 0) {
+    //close eye
+    if (!isEyeExpend)
+      if (titleEyeSpr.scale.y > 0.1)
+        titleEyeSpr.scale.y -= 0.1;
+      else isEyeExpend = true;
+      //open eye
+    else {
+      if (titleEyeSpr.scale.y < config.titleScale)
+        titleEyeSpr.scale.y += 0.1;
+      else {
+        if (--blinkCount > 0)
+          isEyeExpend = false;
+        else {
+          jiboEyeSpr.scale.set(config.eyeScale);
+          jiboEyeSpr.y = -jiboEyeSpr.height/2;
+          readySpr = Sprite.fromImage('images/ready.png');
+          readySpr.position.set(50, 300);
+          readySpr.anchor.set(0.5);
+          readySpr.scale.set(0.3)
+          readySpr.alpha = 0;
+          readySpr.on('click', onReady);
+          titleSpr.addChild(readySpr);
+          delay = 20;
+          state = showReady;
+        }
+      }
+    }
+  }
+}
+
+function showReady(){
+ delay--;
+  if (delay < 0) {
+    if (readySpr.alpha < 0.9) {
+      readySpr.alpha += 0.2;
+    } else {
+      readySpr.interactive = true;
+    }
+  }
+}
+
+function onReady(){
+  delay = 20;
+  state = showTitle3;
+}
+
+function showTitle3() {
+  delay--;
+  if (delay < 0) {
+    if (titleSpr.y < (renderer.height + titleSpr.height/2)) {
+      titleSpr.y += 20;
+    }
+    else {
+      if (jiboEyeSpr.y < renderer.height/2)
+        jiboEyeSpr.y += 20;
+      else {
+        wordSpr = new PIXI.Text('', style);
+        wordSpr.anchor.set(0.5);
+        wordSpr.position.set(renderer.width/2, renderer.height/2+50);
+        boardSprArr = [];
+        for(var i = 1; i < 11; i++) {
+            boardSprArr.push(Sprite.fromImage('images/eyetoboard' + i + '.png'));
+            boardSprArr[i-1].alpha = 0;
+            boardSprArr[i-1].anchor.set(0.5);
+            boardSprArr[i-1].position.set(renderer.width/2, renderer.height/2);
+            boardContainer.addChild(boardSprArr[i-1]);
+        }
+        stage.addChild(boardContainer);
+        barSpr = Sprite.fromImage('images/bar.png');
+        barBkgSpr = Sprite.fromImage('images/bar.png');
+        barMaskSpr = Sprite.fromImage('images/bar.png');
+        barSpr.position.set(renderer.width/2, 688);
+        barBkgSpr.position.set(renderer.width/2, 688);
+        barMaskSpr.position.set(renderer.width/2, 688);
+        barSpr.anchor.x = 0.5;
+        barBkgSpr.anchor.x = 0.5;
+        barMaskSpr.anchor.x = 0.5;
+        barSpr.tint = 0x6bdbf3;
+        barBkgSpr.tint = 0x9f9f9f;
+        barSpr.mask = barMaskSpr;
+        snailSpr = Sprite.fromImage('images/snail.png');
+        snailSpr.position.set(1070, 597)
+        index = 0;
+        delay = 20;
+        state = eyeToBoard;
+      }
+    }
+  }
+}
+
+// function init() {
+//   wordSpr = new PIXI.Text('', style);
+//   wordSpr.anchor.set(0.5)
+//   wordSpr.position.set(renderer.width/2, renderer.height/2+50);
+//   boardSprArr = [];
+//   for(var i = 1; i < 11; i++) {
+//     boardSprArr.push(Sprite.fromImage('images/eyetoboard' + i + '.png'))
+//     boardSprArr[i-1].alpha = 0;
+//     boardSprArr[i-1].anchor.set(0.5);
+//     boardSprArr[i-1].position.set(renderer.width/2, renderer.height/2);
+//     boardContainer.addChild(boardSprArr[i-1]);
+//   }
+//   stage.addChild(boardContainer);
+//   barSpr = Sprite.fromImage('images/bar.png');
+//   barBkgSpr = Sprite.fromImage('images/bar.png');
+//   barMaskSpr = Sprite.fromImage('images/bar.png');
+//   barSpr.position.set(renderer.width/2, 688);
+//   barBkgSpr.position.set(renderer.width/2, 688);
+//   barMaskSpr.position.set(renderer.width/2, 688);
+//   barSpr.anchor.x = 0.5;
+//   barBkgSpr.anchor.x = 0.5;
+//   barMaskSpr.anchor.x = 0.5;
+//   barSpr.tint = 0x6bdbf3;
+//   barBkgSpr.tint = 0x9f9f9f;
+//   barSpr.mask = barMaskSpr;
+//   snailSpr = Sprite.fromImage('images/snail.png');
+//   snailSpr.position.set(1070, 597)
+//   index = 0;
+//   delay = 20;
+//   state = eyeToBoard;
+//   animate();
+// }
+
+function eyeToBoard() {
+  delay--
+  if (delay < 0) {
+    if (index < 6) {
+      if (index > 0) {
+        boardContainer.removeChild(boardSprArr[index-1]);
+      }
+      boardSprArr[index++].alpha = 1;
+    }
+    else {
+      leftBtn = keyboard(37);
+      rightBtn = keyboard(39);
+      leftBtn.press = gameSkip;
+      rightBtn.press = gameRight;
+      audio = document.createElement('audio');
+      document.body.appendChild(audio)
+      stage.removeChild(jiboEyeSpr);
+      words.length = 5;
+      wordIndex = 0;
+      wordSpr.alpha = 0;
+      stage.addChild(wordSpr);
+      stage.addChild(barBkgSpr);
+      stage.addChild(barSpr);
+      stage.addChild(snailSpr);
+      state = showWord;
+    }
+  }
+
+}
+
+function timeTick() {
+  if (snailSpr.x < 75) {
+    gameOver();
+  }
+  else {
+    snailSpr.x -= 1;
+    barMaskSpr.x -= 1;
+  }
+}
+
+function showWord() {
+  wordSpr.text = words[wordIndex];
+  if (wordSpr.alpha < 0.9) {
+    wordSpr.alpha += 0.1;
+  }
+  timeTick();
+}
+
+function boardAnimation() {
+  delay--;
+  if (delay < 0) {
+    if (index < 10) {
+      if (index > 6) {
+        boardSprArr[index-1].alpha = 0;
+      }
+      boardSprArr[index++].alpha = 1;
+      delay = 4;
+      timeTick();
+    }
+    else {
+      showWord();
+    }
+  }
+  else
+    timeTick();
+}
+
+function gameSkip() {
+  wordIndex++;
+  if (wordIndex === words.length) {
+    gameOver();
+    return;
+  }
+  index = 6;
+  delay = 4;
+  wordSpr.alpha = 0;
+  boardSprArr[9].alpha = 0;
+  audio.src = 'audio/skip.mp3'
+  audio.play();
+  state = boardAnimation;
+}
+
+function gameRight() {
+  gameScore++;
+  wordIndex++;
+  if (wordIndex === words.length) {
+    gameOver();
+    return;
+  }
+  index = 6;
+  delay = 4;
+  wordSpr.alpha = 0;
+  boardSprArr[9].alpha = 0;
+  audio.src = 'audio/good.mp3'
+  audio.play();
+  state = boardAnimation;
+}
+
+function gameOver() {
+  leftBtn.press = undefined;
+  rightBtn.press = undefined;
+  boardSprArr[5].alpha = 0;
+  boardScale = 1;
+  stage.removeChild(barSpr);
+  statisScale = 0;
+  statisRotation = 0;
+  statisticsSpr = Sprite.fromImage('images/statistics.png');
+  statisticsSpr.scale.set(0);
+  statisticsSpr.anchor.set(0.5);
+  statisticsSpr.position.set(renderer.width / 2, renderer.height / 2);
+  scoreText = new PIXI.Text('', scoreStyle);
+  scoreText.position.set(70, -95);
+  scoreText.anchor.set(0.5);
+  scoreText.text = gameScore + '';
+  scoreText.style.fill='#ab0000';
+  statisticsSpr.addChild(scoreText);
+  totalText = new PIXI.Text('', scoreStyle);
+  totalText.position.set(70, 98);
+  totalText.anchor.set(0.5);
+  totalText.text = words.length + '';
+  statisticsSpr.addChild(totalText);
+  stage.addChild(statisticsSpr);
+  state = showGameOver;
+}
+
+function showGameOver() {
+  snailSpr.x -= 8;
+  if (boardScale > 0.08) {
+    boardScale -= 0.08;
+    for (var i = 0; i < boardSprArr.length; i++)
+      boardSprArr[i].scale.set(boardScale);
+    wordSpr.scale.set(boardScale);
+    barBkgSpr.scale.set(boardScale);
+  }
+  else {
+    barBkgSpr.alpha -= 0.2;
+    if (statisticsSpr.scale.x < config.statisScale) {
+      statisScale += 0.03;
+      statisticsSpr.scale.set(statisScale);
+    }
+  }
+}
+
+function animate()
+{
+    state();
+    requestAnimationFrame(animate);
+    // and finally render the stage
+    renderer.render(stage);
+}
+
+function keyboard(keyCode) {
+  var key = {};
+  key.code = keyCode;
+  key.isDown = false;
+  key.isUp = true;
+  key.press = undefined;
+  key.release = undefined;
+  //The `downHandler`
+  key.downHandler = function(event) {
+    if (event.keyCode === key.code) {
+      if (key.isUp && key.press) key.press();
+      key.isDown = true;
+      key.isUp = false;
+      event.preventDefault();
+    }
+  };
+
+  //The `upHandler`
+  key.upHandler = function(event) {
+    if (event.keyCode === key.code) {
+      if (key.isDown && key.release) key.release();
+      key.isDown = false;
+      key.isUp = true;
+      event.preventDefault();
+    }
+  };
+
+  //Attach event listeners
+  window.addEventListener(
+    "keydown", key.downHandler.bind(key), false
+  );
+  window.addEventListener(
+    "keyup", key.upHandler.bind(key), false
+  );
+  return key;
+}
+
+</script>
+</body>

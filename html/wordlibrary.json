@@ -1,0 +1,26 @@
+var wordlibrary =
+{
+    "transportations" : ["bus","car","boat","ship","taxi","plane","train","streamer","jeep","motorcar","bicycle","airplane"],
+    "countrys" : ["China","America","Egypt","Brazil","South Korea","North Korea","Poland","New Zealand","Japan","France","England","Canada","Australia","Argentina","Holland","Vietnam","India","Italy","Greece","Mexico","Russia","Sweden","Norway","Spain","German","Switzerland","Thailand","Greece","South Africa"],
+    "bodyparts" : ["Head","foot","leg","tooth","hand","ear","eye","nose","mouth","face","arm","back","neck","stomach","throat","heart","knee","finger","toe","body","hair","beard","elbow"],
+    "clothing" : ["scarf","belt","sneakers","wallet","earring","hat","jeans","watch","straw hat","ring","skate shoes","backpack","tie","bag","pants","socks","dress","coat","shirt","T-shirt","skirt","shorts","sweater","shoes","uniform","jacket","earring","hair clip"],
+    "places" : ["club","restaurant","store","supermarket","museum","school","library","hotel","auditorium","pool","post office","bank","park","zoo","market","garden","hospital","TV Station","Police station","beach","cinema","church","factory","farm","shop","theater","aquarium","college","dining room","barber shop","gymnasium","gallery","drugstore","laboratory","mall","plaza","store","video arcade"],
+    "colors" : ["red","black","green","white","yellow","orange","brown","grey","pink","blond","blue","purple"],
+    "schoolSupplies" : ["pen","pencil","ruler","eraser","paper","pencil-box","ink","notebook","dictionary","sharpener","schoolbag","backpack","textbook","flashcard"],
+    "animals": ["sheep","horse","monkey","dolphin","panda","tiger","fox","snake","rabbit","lion","shark","goat","dog","cock","hen","chicken","duck","elephant","camel","bird","wolf","polar bear","giraffe","koala","penguin","camel","seal","rabbit","octopus","kangaroo","parrot","turtle","ant","mouse","spider","hamster","manatee","goldfish","chimpanzee","cheetah"],
+    "times" : ["January","February","March","April","May","June","July","August","September","October","November","December","spring","summer","autumn","winter Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday Morning","afternoon","noon","evening","night","second","minute","hour","day","week","month","year","Century"],
+    "profession" : ["doctor","nurse","vet","policeman","policewoman","engineer","worker","farmer","reporter","teacher","inventor","scientist","driver","headmaster","player","singer","dancer","actor","actress","guide","waiter","waitress","assistant","boss","businessman","psychologist","author","writer","photographer","musician","guide","violinist","pianist","coach","clerk","sales assistant","cook","dentist","director","optometrist","translator","vegetarian","sportspeople","head teacher","master","pilot","chef","fisherman","lawyer","sailor","tutor","collector"],
+    "balls" : ["basketball","volleyball","football","soccer","ping-pong","tennis","baseball","badminton","ice hockey","golf"],
+    "vegetables" : ["carrot","tomato","cabbage","onion","potato","green pepper","mushroom","broccoli","pumpkin","lettuce"],
+    "fruits" : ["apple","orange","banana","pear","peach","pumpkin","melon","grape","lemon","watermelon","strawberry","lychee","papaya","mango","olive","plum","peach","loquat","apricot","cherry"],
+    "food" : ["beef","noodle","dumpling","rice","chip","bread","sandwich","wheat","egg","Salad","hamburger","French fries","porridge","cheese","hot dog","biscuit","green pepper","pancake","chip","fish","chicken","meat","tofu","pizza","candy","gum","barbecued meat","popcorn","brown bread","chocolate","shrimp","dessert"],
+    "musicInstrument" : ["guitar","piano","drum","trumpet","violin","accordion","erhu"],
+    "electricEquipment" : ["telephone","phone","computer","television","radio","fridge","refrigerator oven","microwave oven","blender","air conditioner","typewriter","recorder","lamp"],
+    "weather" : ["fine","rainy","cloudy","windy","stormy","foggy","sunny","snowy","cold","cool","hot","warm","humid"],
+    "subjects" : ["Chinese","math","English","P.E","music","history","Physics","biology","geography","chemistry","politics","computer","science","art","algebra"],
+    "familyMember" : ["grandfather","grandmother","father","mother","uncle","aunt","sister","brother","son","daughter","cousin","husband","wife","parent"],
+    "kitchenWare" : ["bowl","plate","table","dish","spoon","chopsticks","cupboard","fork","knife"],
+    "character" : ["funny","smart","cute","intelligent","friendly","shy","lazy","serious","unfriendly","quiet","easygoing","outgoing","generous","moody","lovely","lively","talented","upset","nervous","loving","unusual","creative","hard-working","warm-hearted","gentle","polite","confident","energetic","realistic","anxious","brave"],
+    "drink" : ["soda","coffee","milk","water","pop","beer","lemonade","juice","orange","iced tea","beverage","col"],
+    "music" : ["jazz","dance music","country music","classical music","national music","pop music"]
+}

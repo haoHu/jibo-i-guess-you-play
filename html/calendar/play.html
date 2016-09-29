@@ -1,0 +1,155 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Start</title>
+<body>
+<script src="../pixi.js/bin/pixi.js"></script>
+<script>
+
+var renderer = PIXI.autoDetectRenderer(1280, 720, {backgroundColor: "#FFFFFF"});
+document.body.appendChild(renderer.view);
+var config = {
+	itemScale : 1,
+	bombX : 360,
+	bombY : 30,
+	fuseX : 507,
+	fuseY : 38,
+	sparkCount : 6
+}
+var style = {
+    font : 'bold 180px Arial',
+    fill : '#F7EDCA',
+    stroke : '#4a1850',
+    strokeThickness : 5,
+};
+// create the root of the scene graph
+var stage = new PIXI.Container();
+var itemContainer = new PIXI.Container();
+var playItem = {};
+var play;
+var words = ['dog', 'cat', 'cow', 'elephant', 'tiger', 'lion', 'monkey', 'pander', 'pig', 'zebra', 'mouse'];
+var index;
+var result = 0;
+init();
+
+function init() {
+	var left = keyboard(37),
+      right = keyboard(39);
+  //Left arrow key `press` method
+  left.press = function() {
+  	delay = 15;
+  	play = gameSkip;
+  };
+  right.press = function() {
+  	delay = 15;
+  	play = gameRight;
+  };
+
+	renderer.render(stage);
+	playItem['right'] = PIXI.Sprite.fromImage('images/right.png');
+	playItem['skip'] = PIXI.Sprite.fromImage('images/skip.png');
+	playItem['board'] = PIXI.Sprite.fromImage('images/board.png');
+	playItem['text'] = new PIXI.Text('', style);
+	for (item in playItem) {
+		playItem[item].scale.set(config.itemScale);
+		playItem[item].position.set(renderer.width/2, renderer.height/2);
+		playItem[item].anchor.set(0.5);
+		playItem[item].alpha = 0;
+		itemContainer.addChild(playItem[item]);
+	}
+	playItem['text'].y += 20;
+	stage.addChild(itemContainer);
+	index = 0;
+	play = gameShowBoard;
+	animate();
+}
+
+function gameShowBoard(){
+	playItem['text'].text = words[index];
+	playItem['text'].alpha = 1;
+	playItem['board'].alpha = 1;
+	playItem['right'].alpha = 0;
+	playItem['skip'].alpha = 0;
+}
+
+var delay = 15;
+function gameRight() {
+	delay--;
+	playItem['board'].alpha = 0;
+	playItem['text'].alpha = 0;
+	playItem['right'].alpha = 1;
+	if(delay === 0) {
+		index++;
+		result++;
+		console.log(result)
+		play = gameShowBoard;
+	}
+}
+
+function gameSkip() {
+	delay--;
+	playItem['board'].alpha = 0;
+	playItem['text'].alpha = 0;
+	playItem['skip'].alpha = 1;
+	if(delay === 0) {
+		index++;
+		play = gameShowBoard;
+	}
+}
+
+function gameOverShow(){
+	var statistics = PIXI.Sprite.fromImage('images/statistics.png');
+	var statisContainer = new PIXI.Container();
+	statistics.scale.set(0.8);
+	statistics.position.set(280, 5);
+	statisContainer.addChild(statistics);
+	stage.addChild(statisContainer);
+	play = gameOver;
+}
+
+function gameOver(){
+
+}
+
+function animate() {
+	play();
+    renderer.render(stage);
+    requestAnimationFrame(animate);
+}
+function keyboard(keyCode) {
+  var key = {};
+  key.code = keyCode;
+  key.isDown = false;
+  key.isUp = true;
+  key.press = undefined;
+  key.release = undefined;
+  //The `downHandler`
+  key.downHandler = function(event) {
+    if (event.keyCode === key.code) {
+      if (key.isUp && key.press) key.press();
+      key.isDown = true;
+      key.isUp = false;
+      event.preventDefault();
+    }
+  };
+
+  //The `upHandler`
+  key.upHandler = function(event) {
+    if (event.keyCode === key.code) {
+      if (key.isDown && key.release) key.release();
+      key.isDown = false;
+      key.isUp = true;
+      event.preventDefault();
+    }
+  };
+
+  //Attach event listeners
+  window.addEventListener(
+    "keydown", key.downHandler.bind(key), false
+  );
+  window.addEventListener(
+    "keyup", key.upHandler.bind(key), false
+  );
+  return key;
+}
+</script>
+</body>
